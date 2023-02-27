@@ -57,7 +57,7 @@ static void task1_handle(void *arg)
         }
 
 
-        // zlog_dump(LOG3_TAG, g_test_buf, sizeof(g_test_buf));
+        zlog_dump(LOG3_TAG, g_test_buf, sizeof(g_test_buf));
         printf("-------------------------------------------------------------------\r\n");
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
@@ -91,6 +91,6 @@ void zlog_demo_init(void)
 
     zlog_start();
 
-    // xTaskCreate(task1_handle, "zlog_test1_task", 4096, NULL, 3, &g_task1_handle);
+    xTaskCreate(task1_handle, "zlog_test1_task", 4096, NULL, 3, &g_task1_handle);
     xTaskCreate(task2_handle, "zlog_test2_task", 4096, NULL, 1, &g_task2_handle);
 }
