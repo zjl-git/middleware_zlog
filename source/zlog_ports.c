@@ -70,9 +70,11 @@ void zlog_port_deinit(void)
 
 }
 
+#include "esp_log.h"
+#define TAGS            "zlog"
 void zlog_port_output(uint8_t *log, uint32_t size)
 {
-    printf("%s", log);
+    ESP_LOGI(TAGS, "%s", log);
 }
 
 void zlog_port_lock(void)

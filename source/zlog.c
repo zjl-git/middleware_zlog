@@ -283,7 +283,7 @@ void zlog_output(uint8_t level, const char *tag, const char *file, const char *f
             snprintf(line_num, ZLOG_LINE_NUM_MAX_LEN, "%ld", line);
             zlog_len += zlog_strcpy(zlog_len, g_zlog_buf + zlog_len, line_num);
         }
-        zlog_len += zlog_strcpy(zlog_len, g_zlog_buf + zlog_len, ")");
+        zlog_len += zlog_strcpy(zlog_len, g_zlog_buf + zlog_len, ") ");
     }
 
     formate_result = vsnprintf(g_zlog_buf + zlog_len, ZLOG_LINE_BUF_SIZE - zlog_len, format, args);

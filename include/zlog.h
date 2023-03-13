@@ -48,6 +48,13 @@ typedef enum {
 #define ZLOG_FORMAT_ALL (ZLOG_FORMAT_LEVEL|ZLOG_FORMAT_TAG|ZLOG_FORMAT_TIME|ZLOG_FORMAT_P_INFO|ZLOG_FORMAT_I_INFO| \
                          ZLOG_FORMAT_DIR|ZLOG_FORMAT_FUNC|ZLOG_FORMAT_LINE)
 
+#define ZLOG_A(tag, ...)        zlog_assert(tag, __VA_ARGS__)
+#define ZLOG_E(tag, ...)        zlog_error(tag, __VA_ARGS__)
+#define ZLOG_W(tag, ...)        zlog_warn(tag, __VA_ARGS__)
+#define ZLOG_I(tag, ...)        zlog_info(tag, __VA_ARGS__)
+#define ZLOG_D(tag, ...)        zlog_debug(tag, __VA_ARGS__)
+#define ZLOG_V(tag, ...)        zlog_verbose(tag, __VA_ARGS__)
+
 #ifndef ZLOG_OUTPUT_ENABLE
     #define zlog_assert(tag, ...)
     #define zlog_error(tag, ...)
