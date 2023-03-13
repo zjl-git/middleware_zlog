@@ -1,5 +1,5 @@
-#ifndef __ZLOG_CONFIG_H__
-#define __ZLOG_CONFIG_H__
+#ifndef __ZLOG_CONFIG_TEMPLATE_H__
+#define __ZLOG_CONFIG_TEMPLATE_H__
 
 #ifdef __cplusplus
 extern "C" {
@@ -28,22 +28,22 @@ extern "C" {
 
 #define ZLOG_FILTER_TAG_LEVEL_MAX_NUM           20
 
-#define ZLOG_NEWLINE_SIGN                       "\n"
+#define ZLOG_NEWLINE_SIGN                       "\r\n"
 
 /*---------------------------------------------------------------------------*/
 
-// #define ZLOG_ASYNC_OUTPUT_ENABLE
+#define ZLOG_ASYNC_OUTPUT_ENABLE
 
-// #define ZLOG_ASYNC_LINE_OUTPUT
+#define ZLOG_ASYNC_LINE_OUTPUT
 
-// #define ZLOG_ASYNC_OUTPUT_LVL                    ZLOG_LVL_ERROR
+#define ZLOG_ASYNC_OUTPUT_LVL                    ZLOG_LVL_ERROR
 
-// #define ZLOG_ASYNC_OUTPUT_BUF_SIZE               (ZLOG_LINE_BUF_SIZE * 10)
+#define ZLOG_ASYNC_OUTPUT_BUF_SIZE               (ZLOG_LINE_BUF_SIZE * 10)
 
 /*---------------------------------------------------------------------------*/
-// #define ZLOG_BUF_OUTPUT_ENABLE
+#define ZLOG_BUF_OUTPUT_ENABLE
 
-// #define ZLOG_BUF_OUTPUT_BUF_SIZE                 (ZLOG_LINE_BUF_SIZE * 10)
+#define ZLOG_BUF_OUTPUT_BUF_SIZE                 (ZLOG_LINE_BUF_SIZE * 10)
 
 
 
